@@ -7,10 +7,10 @@ import base64
 from wechatpy.utils import to_text, to_binary, random_string, byte2int
 from wechatpy.crypto.pkcs7 import PKCS7Encoder
 try:
-    from wechatpy.crypto.cryptography import WeChatCipher
+    from wechatpy.crypto.pycrypto import WeChatCipher
 except ImportError:
     try:
-        from wechatpy.crypto.pycrypto import WeChatCipher
+        from wechatpy.crypto.cryptography import WeChatCipher
     except ImportError:
         raise Exception('You must install either cryptography or PyCrypto!')
 
